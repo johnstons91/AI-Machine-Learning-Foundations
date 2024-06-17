@@ -1,6 +1,7 @@
 import math
 
-'''Code Calculator:
+'''
+Code Calculator:
 
 - Addition
 - Subtraction
@@ -12,4 +13,5 @@ Add more features and make it user-friendly with multiple revision prompts.
 Please submit the code file and the conversation with the AI chatbot (Chat GPT, Gemini, or Claude).
 
 '''
+
 
