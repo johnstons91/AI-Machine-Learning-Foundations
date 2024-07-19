@@ -38,31 +38,35 @@ def division(num1, num2):
 #Main calculator function to get user input
 
 def calculator():
-    
-    try:
-        '''Input from users.'''
-        num1 = float(input("Enter first number. ")) 
-        operator = input("Enter operator (+, -, *, /): ")
-        num2 = float(input("Enter second number. "))
+    while True:
+        try:
+            '''Input from users.'''
+            num1 = float(input("Enter first number: ")) 
+            operator = input("Enter operator (+, -, *, /): ")
+        
+            if num1.lower() == 'e':
+                print("Exiting the calculator. Have a nice day!")
+                break
+        
+            num2 = float(input("Enter second number: "))
         
 #Calculator performance based on operator.
-        if addition == '+':
-            result = num1 + num2
-        elif subtraction == '-':
-            result = num1 - num2
-        elif multiplication == '*':
-            result = num1 * num2
-        elif division == '/':
-            result = num1 / num2
-        else:
-            result = "Error: Invalid Operator"
+            if operator == '+':
+                result = num1 + num2
+            elif operator == '-':
+                result = num1 - num2
+            elif operator == '*':
+                result = num1 * num2
+            elif operator == '/':
+                result = division(num1, num2)
+            else:
+                result = "Error: Invalid Operator"
             
-        if result is not None:
-            print(f"Result: {result}")
+            if result is not None:
+                print(f"Result: {result}")
             
-    except ValueError:
-        ValueError = print("Input not valid! Please enter another number. ")
-    calculator()
+        except ValueError:
+            print("Input not valid! Please enter another number. ")
     
 #Runs the calculator
 
